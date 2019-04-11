@@ -76,31 +76,7 @@ function recopen(){
 	},function(e,isUserNotAllow){
 	});
 };
-// function recclose(){
-// 	if(rec){
-// 		rec.close(function(){
-// 			reclog("已关闭");
-// 		});
-// 	}
-// };
-// function recstart(){
-// 	if(rec){
-// 		rec.start();
-// 		// reclog("录制中...");
-// 	};
-// };
-// function recpause(){
-// 	if(rec){
-// 		rec.pause();
-// 		reclog("已暂停");
-// 	};
-// };
-// function recresume(){
-// 	if(rec){
-// 		rec.resume();
-// 		reclog("继续录音中...");
-// 	};
-// };
+	
 RandomKey.idx=0;
 function RandomKey(){
 	return "randomkey"+(RandomKey.idx++);
@@ -117,6 +93,24 @@ function recstop(){
 		},function(s){
 
 		});
+	};
+};
+	function recstart(){
+	if(rec){
+		rec.start();
+		// reclog("录制中...");
+	};
+};
+function recpause(){
+	if(rec){
+		rec.pause();
+		reclog("已暂停");
+	};
+};
+function recresume(){
+	if(rec){
+		rec.resume();
+		reclog("继续录音中...");
 	};
 };
 var intp=function(s,len){
